@@ -15,10 +15,14 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+    // first we load all dependencies:
         '../../bower_components/angular/angular.js',
         '../../bower_components/angular-mocks/angular-mocks.js',
         '../../bower_components/angular-ui-router/release/angular-ui-router.js',
+        // then we load our app and all required files:
         '../app.js',
+        '../controllers/testing-angular-controller.js',
+        // finally we load all our tests:
         'unit/*.js'
     ],
 
